@@ -105,3 +105,64 @@ function MaximumNumber(arrayOfNumbers){
 }
 
 console.log(MaximumNumber([4,5,6]));
+
+
+// checkif vowels or consonant
+// // function checkVolwelsAndconsonant(inputString){
+//     const vowels = "aeiou"
+//     inputString = inputString.toLowerCase();
+//     if(vowels.includes(inputString)){
+//         return "vowel";
+//     }else{
+//         return "consonant";
+//     }
+// }
+// console.log(checkVolwelsAndconsonant("a"));
+// console.log(checkVolwelsAndconsonant("m"));
+
+// checkif string is a palindrome or Not
+
+function isPalindrome(inputString) {
+    for (let i = 0; i < inputString.length / 2; i++) {
+        if (inputString[i] !== inputString[inputString.length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isPalindrome("ashish")); 
+console.log(isPalindrome("madam"));  
+console.log(isPalindrome("level"));  
+
+
+// returns the result of raising a given number to a specified power
+
+function calculatePower(base,exponant){
+    let result = 1;
+    for (let i = 1; i <= exponant; i++){
+        result = result * base;
+        
+    }
+    return result;
+}
+
+calculatePower(4,3)
+
+
+// check all the factors are given no.
+
+function findAllfactor(inputnumber){
+    if(inputnumber < 1){
+        throw new Error ("inputnumber should be greater than zero")
+    }
+    let result = [];
+    for(let i = 1; i <= inputnumber; i++){
+        if(inputnumber % i ===0){
+            result.push(i);
+        }
+    }
+    return result;
+}
+
+console.log(findAllfactor(6));
